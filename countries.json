@@ -1,0 +1,22 @@
+[
+	{
+		"name": "Washington",
+		"currency": "USD"
+	},
+	{
+		"name": "Montevideo",
+		"currency": "UYU"
+	},
+	{
+		"name": "Tashkent",
+		"currency": "UZS"
+	},
+	{
+		"name": "Vatican City",
+		"currency": "EUR"
+	},
+	{
+		"name": "Kingstown",
+		"currency": "XCD
+	"}
+]
