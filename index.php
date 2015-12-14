@@ -20,14 +20,14 @@
 			<td>{{country.Name}}</td>
 		</tr> -->
 
-	Controllers<br />Adding search filters<br /><br />
+	Controllers<br />Adding search filters | Sort columns interactively & in reverse<br /><br />
 	<table>
 		<tr>
-			<th>Country</th>
-			<th>City</th>
-			<th>Name</th>
+			<th><a href="" ng-click="sortField = 'Country'; reverse = !reverse">Country</a></th>
+			<th><a href="" ng-click="sortField = 'City'; reverse = !reverse">City</a></th>
+			<th><a href="" ng-click="sortField = 'Name'; reverse = !reverse">Name</a></th>
 		</tr>
-		<tr ng-repeat="country in countries | filter:query | orderBy: 'Name'">
+		<tr ng-repeat="country in countries | filter: query | orderBy: sortField : reverse">
 			<td>{{country.Country}}</td>
 			<td>{{country.City}}</td>
 			<td>{{country.Name}}</td>
@@ -60,6 +60,9 @@
 		http.get('http://www.w3schools.com/angular/customers.php').success(function(data) {
 			scope.countries = data.records;
 		});
+
+		scope.sortField = 'Country';
+		scope.reverse = true;
 	}]);
 </script>
 </body>
